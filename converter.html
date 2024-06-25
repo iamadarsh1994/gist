@@ -1,0 +1,28 @@
+<!-- Question-1 :   Input the distance in Kilometer and Convert into Meter and Centimeter. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <input type="text" name="" id="convert" placeholder="Enter the distance in KMs">
+    <button id="btn">Convert</button>
+    <div id="results"></div>
+ <script>
+   let converts = document.getElementById('btn')
+   let inputItem = document.getElementById('convert')
+   // let result = document.getElementById('results')
+   converts.addEventListener('click', function(){
+    let theInput =  inputItem.value * 1000;
+    let inputInCm = theInput * 100;
+   //  console.log(theInput + "Meters")
+   //  console.log(inputInCm + "CMs")
+
+    document.getElementById('results').innerHTML = (`${theInput} Meters and ${inputInCm} Cms`) 
+   })
+ </script>
+ 
+   </body>
+ </html>
